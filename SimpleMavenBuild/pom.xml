@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+   http://maven.apache.org/xsd/maven-4.0.0.xsd">
+   <modelVersion>4.0.0</modelVersion>
+ <groupId>SimpleMavenBuild</groupId>
+  <artifactId>SimpleMavenBuild</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  <name>Ramakrishna</name>
+  <description>V1</description>
+   <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <configuration>
+                    <webXml>WebContent\WEB-INF\web.xml</webXml>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    
+    <distributionManagement>
+            <snapshotRepository>
+                    <id>my-snapshots</id>
+                    <name>My internal repository</name>
+                    <url>http://myserver:8080/nexus/content/repositories/snapshots</url>
+            </snapshotRepository>
+            <repository>
+                    <id>my-releases</id>
+                    <name>My internal repository</name>
+                    <url>http://myserver:8080/nexus/content/repositories/releases</url>
+            </repository>
+    </distributionManagement>
+ 
+</project>
